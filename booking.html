@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Your Event | Banana Mahal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Flatpickr Calendar -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  
+  <link rel="stylesheet" href="assets/css/booking.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <span>🍃</span>
+      <span>Banana Mahal</span>
+    </a>
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#gallery">Gallery</a></li>
+      <li><a href="index.html#testimonials">Reviews</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="booking-wrapper">
+  <div class="booking-card">
+    
+    <div class="header">
+      <h2>🍃 Book Your Event</h2>
+      <p class="subtitle">Banana Mahal - Function Hall & Guest House</p>
+    </div>
+    
+    <form id="bookingForm">
+      
+      <div class="field">
+        <select id="resource" required>
+          <option value="">Select Venue</option>
+          <option value="Function Hall">Function Hall</option>
+          <option value="Guest House">Guest House</option>
+        </select>
+        <label>Venue Type</label>
+      </div>
+      
+      <div class="field">
+        <select id="eventType" required>
+          <option value="">Select Purpose</option>
+        </select>
+        <label>Event Type</label>
+      </div>
+      
+      <div class="field">
+        <input type="text" id="startDate" placeholder="Click to select date" required readonly>
+        <label>Start Date</label>
+        <span class="calendar-icon">📅</span>
+      </div>
+      
+      <div class="field" id="endDateBox" style="display:none;">
+        <input type="text" id="endDate" placeholder="Click to select check-out date" readonly>
+        <label>End Date (Check-out)</label>
+        <span class="calendar-icon">📅</span>
+      </div>
+      
+      <div class="field" id="slotBox">
+        <select id="slot">
+          <option value="FULL_DAY">Full Day</option>
+          <option value="MORNING">Morning</option>
+          <option value="AFTERNOON">Afternoon</option>
+          <option value="EVENING">Evening</option>
+          <option value="NIGHT">Night</option>
+        </select>
+        <label>Time Preference</label>
+      </div>
+      
+      <div class="field">
+        <input type="text" id="name" required>
+        <label>Your Name</label>
+      </div>
+      
+      <div class="field">
+        <input type="tel" id="phone" pattern="[0-9]{10}" required>
+        <label>Mobile Number (10 digits)</label>
+      </div>
+      
+      <div class="field">
+        <input type="number" id="guests" min="1" required>
+        <label>Number of Guests</label>
+      </div>
+      
+      <div class="field">
+        <textarea id="message" rows="3"></textarea>
+        <label>Additional Message (Optional)</label>
+      </div>
+      
+      <div id="availability" class="status"></div>
+      
+      <button type="submit" id="submitBtn">Request Booking</button>
+      
+      <p class="note">⏳ Booking will be confirmed within 24 hours via WhatsApp</p>
+    </form>
+    
+    <div class="back-link">
+      <a href="index.html">← Back to Home</a>
+    </div>
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="assets/js/booking.js"></script>
+<script>
+// Mobile menu toggle
+function toggleMobileMenu() {
+  const navLinks = document.getElementById('navLinks');
+  navLinks.classList.toggle('active');
+}
+
+// Close mobile menu when clicking a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('navLinks').classList.remove('active');
+  });
+});
+</script>
+</body>
+</html>

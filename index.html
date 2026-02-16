@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banana Mahal - Function Hall & Guest House</title>
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="font-[Poppins] bg-gray-50 text-gray-800">
+
+  <!-- Scroll Progress -->
+  <div id="progress-bar"></div>
+
+  <!-- Navbar -->
+  <nav class="fixed w-full bg-white dark:bg-gray-900 shadow-md z-50 transition-colors">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html"><h1 class="text-2xl font-bold text-rose-600 cursor-pointer">🍃 Banana Mahal</h1></a>
+      <div class="flex items-center gap-8">
+        <div class="hidden md:flex gap-8">
+          <a href="#about" class="hover:text-rose-600 dark:text-white">About</a>
+          <a href="#gallery" class="hover:text-rose-600 dark:text-white">Gallery</a>
+          <a href="#testimonials" class="hover:text-rose-600 dark:text-white">Reviews</a>
+          <a href="#contact" class="hover:text-rose-600 dark:text-white">Contact</a>
+        </div>
+        <button onclick="toggleDarkMode()" class="text-2xl">🌓</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative h-screen flex items-center justify-center text-white">
+    <img src="img/murugan pic.jpg" class="absolute w-full h-full object-cover" loading="lazy" alt="Banana Mahal">
+    <div class="absolute w-full h-full bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
+    
+    <div class="relative text-center z-10 px-4">
+      <h2 class="hero-title text-4xl md:text-6xl font-bold mb-6">
+        Celebrate Your Special Moments With Us
+      </h2>
+      <a href="booking.html" class="inline-block bg-rose-600 px-8 py-3 rounded-full hover:bg-rose-700 transition">
+        Book Now ✨
+      </a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 max-w-6xl mx-auto px-6 dark:bg-gray-900">
+    <h2 class="section-title text-4xl font-bold text-center mb-16 dark:text-white">
+      About Banana Mahal
+    </h2>
+    
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-6">
+        <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+          Welcome to <span class="text-rose-600 font-semibold">Banana Mahal</span>, your premier destination for hosting memorable events and comfortable stays. With over 15 years of experience, we've been the trusted choice for families celebrating life's special moments.
+        </p>
+        <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+          Our spacious function hall accommodates up to 500 guests, perfect for weddings, receptions, and celebrations. The attached guest house offers comfortable rooms for your guests, making us a complete venue solution.
+        </p>
+        <div class="flex flex-wrap gap-4 mt-8">
+          <div class="flex items-center gap-2 bg-rose-50 dark:bg-rose-900/20 px-4 py-2 rounded-full">
+            <span class="text-2xl">✨</span>
+            <span class="font-semibold text-rose-600 dark:text-rose-400">Modern Facilities</span>
+          </div>
+          <div class="flex items-center gap-2 bg-rose-50 dark:bg-rose-900/20 px-4 py-2 rounded-full">
+            <span class="text-2xl">🍽️</span>
+            <span class="font-semibold text-rose-600 dark:text-rose-400">Dining Hall</span>
+          </div>
+          <div class="flex items-center gap-2 bg-rose-50 dark:bg-rose-900/20 px-4 py-2 rounded-full">
+            <span class="text-2xl">🅿️</span>
+            <span class="font-semibold text-rose-600 dark:text-rose-400">Ample Parking</span>
+          </div>
+          <div class="flex items-center gap-2 bg-rose-50 dark:bg-rose-900/20 px-4 py-2 rounded-full">
+            <span class="text-2xl">🛗</span>
+            <span class="font-semibold text-rose-600 dark:text-rose-400">Lift Access</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="relative">
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl transform rotate-3"></div>
+        <img src="img/IMG_2681.JPG" alt="Banana Mahal Venue" class="relative rounded-3xl shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-500" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Counter -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-16 text-gray-800" data-aos="fade-up">
+        Why Choose Us
+      </h2>
+      
+      <div class="grid md:grid-cols-4 gap-8">
+        
+        <div class="text-center group" data-aos="fade-up" data-aos-delay="0">
+          <div class="w-20 h-20 bg-blue-500 rounded-2xl flex items-center justify-center text-4xl mx-auto mb-4 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+            🏛️
+          </div>
+          <h3 class="text-5xl font-bold counter text-gray-800 mb-2" data-target="250">0</h3>
+          <p class="text-gray-600 font-medium">Seating Capacity</p>
+        </div>
+        
+        <div class="text-center group" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-20 h-20 bg-green-500 rounded-2xl flex items-center justify-center text-4xl mx-auto mb-4 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+            🎉
+          </div>
+          <h3 class="text-5xl font-bold counter text-gray-800 mb-2" data-target="250">0</h3>
+          <p class="text-gray-600 font-medium">Happy Events</p>
+        </div>
+        
+        <div class="text-center group" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-20 h-20 bg-amber-500 rounded-2xl flex items-center justify-center text-4xl mx-auto mb-4 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+            ⭐
+          </div>
+          <h3 class="text-5xl font-bold counter text-gray-800 mb-2" data-target="3">0</h3>
+          <p class="text-gray-600 font-medium">Years Experience</p>
+        </div>
+        
+        <div class="text-center group" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-20 h-20 bg-purple-500 rounded-2xl flex items-center justify-center text-4xl mx-auto mb-4 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+            🅿️
+          </div>
+          <h3 class="text-5xl font-bold counter text-gray-800 mb-2" data-target="35">0</h3>
+          <p class="text-gray-600 font-medium">Parking Slots</p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Gallery -->
+<section id="gallery" class="section experience-gallery py-20">
+  <h2 class="section-title text-3xl font-bold text-center mb-4 dark:text-white">
+    Moments from Our Function Hall
+  </h2>
+  <p class="gallery-subtitle text-center mb-10">
+    Where celebrations turn into memories
+  </p>
+
+  <div class="experience-grid max-w-7xl mx-auto px-6">
+
+    <!-- Wedding -->
+    <div class="experience-card">
+      <img src="img/IMG_20240326_192426.jpg" alt="Wedding Event" loading="lazy">
+      <div class="experience-info">
+        <h3>Wedding Ceremony</h3>
+        <span>Elegant & Spacious Setup</span>
+      </div>
+    </div>
+
+    <!-- Reception -->
+ <div class="experience-card">
+  <img src="img/IMG_2556.jpg" alt="Reception Rooms Booking" loading="lazy">
+  <div class="experience-info">
+    <h3>Reception Rooms Booking</h3>
+    <span>Comfortable Rooms for Guests</span>
+  </div>
+</div>
+
+
+    <!-- Dining -->
+    <div class="experience-card">
+      <img src="img/IMG_2656.JPG" alt="Dining Area" loading="lazy">
+      <div class="experience-info">
+        <h3>Dining Hall</h3>
+        <span>Comfortable & Hygienic</span>
+      </div>
+    </div>
+
+    <!-- Stage -->
+  <div class="experience-card">
+  <img src="img/IMG_2595.JPG" alt="Pooja Room" loading="lazy">
+  <div class="experience-info">
+    <h3>Pooja Room</h3>
+    <span>Peaceful & Divine Ambience</span>
+  </div>
+</div>
+
+
+    <!-- Hall Interior -->
+    <div class="experience-card">
+      <img src="img/IMG_2634.JPG" alt="Hall Interior" loading="lazy">
+      <div class="experience-info">
+        <h3>Hall Interior</h3>
+        <span>Spacious & Well-Lit</span>
+      </div>
+    </div>
+
+    <!-- Event Setup -->
+   <div class="experience-card">
+  <img src="img/IMG_2555.jpg" alt="Lift Facility" loading="lazy">
+  <div class="experience-info">
+    <h3>Lift Facility</h3>
+    <span>Easy & Convenient Access</span>
+  </div>
+</div>
+
+
+    <!-- Bedroom -->
+    <div class="experience-card">
+      <img src="img/IMG_2586.JPG" alt="Bedroom" loading="lazy">
+      <div class="experience-info">
+        <h3>Bedroom</h3>
+        <span>Comfortable & Peaceful Stay</span>
+      </div>
+    </div>
+
+    <!-- Venue Overview -->
+    <div class="experience-card">
+      <img src="img/IMG_2681.JPG" alt="Venue View" loading="lazy">
+      <div class="experience-info">
+        <h3>Venue Overview</h3>
+        <span>Grand & Welcoming</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-20 dark:bg-gray-900">
+    <h2 class="section-title text-3xl font-bold text-center mb-12 dark:text-white">What Our Clients Say</h2>
+    
+    <div class="swiper testimonialSwiper max-w-4xl mx-auto px-6">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="card text-center">
+            <p class="text-gray-600 mb-4">"Amazing venue! Our wedding was perfect. The staff was professional and the hall was beautifully decorated."</p>
+            <h4 class="font-bold">- Priya & Raj</h4>
+            <p class="text-yellow-500">⭐⭐⭐⭐⭐</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card text-center">
+            <p class="text-gray-600 mb-4">"Excellent facilities and great food arrangements. Highly recommend for any function!"</p>
+            <h4 class="font-bold">- Lokesh Jayanth</h4>
+            <p class="text-yellow-500">⭐⭐⭐⭐⭐</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+  <div class="card text-center">
+    <p class="text-gray-600 mb-4">
+      "Very clean and well-maintained hall. The lift facility and guest rooms were extremely helpful for elders."
+    </p>
+    <h4 class="font-bold">- Suresh Kumar</h4>
+    <p class="text-yellow-500">⭐⭐⭐⭐⭐</p>
+  </div>
+</div>
+
+<div class="swiper-slide">
+  <div class="card text-center">
+    <p class="text-gray-600 mb-4">
+      "Excellent service and timely support. The dining area was hygienic and spacious. Totally satisfied!"
+    </p>
+    <h4 class="font-bold">- Anitha Ramesh</h4>
+    <p class="text-yellow-500">⭐⭐⭐⭐⭐</p>
+  </div>
+</div>
+
+<div class="swiper-slide">
+  <div class="card text-center">
+    <p class="text-gray-600 mb-4">
+      "Best function hall in this area. Parking space and overall arrangements were well planned."
+    </p>
+    <h4 class="font-bold">- Karthik & Family</h4>
+    <p class="text-yellow-500">⭐⭐⭐⭐⭐</p>
+  </div>
+</div>
+
+<div class="swiper-slide">
+  <div class="card text-center">
+    <p class="text-gray-600 mb-4">
+      "Guest house rooms were neat and comfortable. Perfect choice for weddings and receptions."
+    </p>
+    <h4 class="font-bold">- Revathi</h4>
+    <p class="text-yellow-500">⭐⭐⭐⭐⭐</p>
+  </div>
+</div>
+
+        <div class="swiper-slide">
+          <div class="card text-center">
+            <p class="text-gray-600 mb-4">"Spacious hall with ample parking and beautiful guest house. Our reception was a grand success thanks to Banana Mahal."</p>
+            <h4 class="font-bold">- Meera & Vikram</h4>
+            <p class="text-yellow-500">⭐⭐⭐⭐⭐</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 max-w-4xl mx-auto px-6 dark:bg-gray-900">
+    <h2 class="section-title text-3xl font-bold text-center mb-12 dark:text-white">Contact Us</h2>
+    
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="card">
+        <h3 class="font-bold text-xl mb-4">Get In Touch</h3>
+        <p class="mb-2">📍 <a href="https://maps.app.goo.gl/iU9PvswGXpMV7ZrNA" target="_blank" class="text-rose-600 hover:text-rose-700 hover:underline">View on Google Maps</a></p>
+        <p class="mb-2">📞 +91 9443377760</p>
+        <p class="mb-2">✉  bananamahaljyothi@gmail.com</p>
+        <p class="mb-4">🕒 Open: 9 AM - 9 PM</p>
+        
+        <div class="mt-6">
+          <h4 class="font-semibold mb-2">Follow Us</h4>
+          <div class="flex gap-4">
+            <a href="#" class="text-2xl hover:text-rose-600">📘</a>
+            <a href="#" class="text-2xl hover:text-rose-600">📷</a>
+            <a href="#" class="text-2xl hover:text-rose-600">🐦</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <h3 class="font-bold text-xl mb-4">Send Message</h3>
+        <form id="contactForm" onsubmit="submitContact(event)">
+          <input type="text" id="name" placeholder="Your Name" class="input" required>
+          <input type="email" id="email" placeholder="Your Email" class="input" required>
+          <input type="tel" id="phone" placeholder="Phone Number" class="input" required>
+          <textarea id="message" placeholder="Your Message" class="input" rows="4" required></textarea>
+          <button type="submit" class="bg-rose-600 text-white px-6 py-2 rounded hover:bg-rose-700 w-full">
+            Send Message
+          </button>
+        </form>
+        <div id="formMessage" class="mt-4"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center py-6">
+    <p>© 2026 Banana Mahal - Function Hall & Guest House.</p>
+    <p class="text-sm mt-2 text-gray-400">Designed with ❤️ for memorable celebrations</p>
+  </footer>
+
+  <!-- Booking Modal -->
+  <div id="bookingModal" class="modal">
+    <div class="modal-content">
+      <span onclick="closeModal()" class="close">&times;</span>
+      <h3 class="text-xl font-bold mb-2">📅 Book Our Venue</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Check availability and request booking</p>
+      
+      <form id="bookingForm" onsubmit="submitAdvancedBooking(event)">
+        <select id="bookingType" class="input" required onchange="updateEventTypeOptions()">
+          <option value="">Select Venue Type</option>
+          <option value="Function Hall">Function Hall</option>
+          <option value="Guest House">Guest House</option>
+        </select>
+        
+        <select id="bookingPurpose" class="input" required>
+          <option value="">Select Purpose</option>
+        </select>
+        
+        <div id="dateInputs">
+          <input type="date" id="bookingDate" class="input" placeholder="Check-in Date" required>
+          <input type="date" id="checkOutDate" class="input" placeholder="Check-out Date" style="display:none;">
+        </div>
+        
+        <select id="timeSlot" class="input" required>
+          <option value="">Select Time Preference</option>
+          <option value="FULL_DAY">Full Day (Entire Day)</option>
+          <option value="MORNING">Morning (6 AM - 12 PM)</option>
+          <option value="AFTERNOON">Afternoon (12 PM - 4 PM)</option>
+          <option value="EVENING">Evening (4 PM - 9 PM)</option>
+          <option value="NIGHT">Night (9 PM - 12 AM)</option>
+        </select>
+        
+        <input type="text" id="bookingName" placeholder="Your Name" class="input" required>
+        
+        <input type="tel" id="bookingPhone" placeholder="Mobile Number (10 digits)" class="input" required pattern="[6-9][0-9]{9}">
+        
+        <input type="number" id="guestCount" placeholder="Number of Guests" class="input" required min="1">
+        
+        <textarea id="bookingMessage" placeholder="Additional Message (Optional)" class="input" rows="3"></textarea>
+        
+        <div id="availabilityCheck" class="text-sm mb-3"></div>
+        
+        <button type="submit" id="bookingSubmitBtn" class="bg-rose-600 text-white px-6 py-3 rounded-full hover:bg-rose-700 w-full font-semibold">
+          Request Booking
+        </button>
+      </form>
+      
+      <div id="bookingStatus" class="mt-4"></div>
+      
+      <p class="text-xs text-gray-500 dark:text-gray-400 mt-4 text-center">
+        ℹ️ Your booking request will be reviewed and confirmed within 24 hours
+      </p>
+    </div>
+  </div>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/919384376599" class="whatsapp" target="_blank" aria-label="Contact via WhatsApp">💬</a>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
